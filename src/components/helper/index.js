@@ -10,7 +10,7 @@ export default class Helper extends PureComponent {
   };
 
   static propTypes = {
-    style: Animated.Text.propTypes.style,
+    // style: Animated.Text.propTypes.style,
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node,
