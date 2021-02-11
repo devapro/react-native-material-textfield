@@ -30,7 +30,7 @@ export default class Label extends PureComponent {
     animationDuration: PropTypes.number.isRequired,
     useNativeDriver: PropTypes.bool,
 
-    style: Animated.Text.propTypes.style,
+    // style: Animated.Text.propTypes.style,
 
     children: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
