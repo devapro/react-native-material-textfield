@@ -131,7 +131,7 @@ export default class TextField extends PureComponent {
     };
   }
 
-  componentWillReceiveProps(props) {
+  UNSAFE_componentWillReceiveProps(props) {
     let { error } = this.state;
 
     if (null != props.value) {
@@ -155,7 +155,7 @@ export default class TextField extends PureComponent {
     this.mounted = false;
   }
 
-  componentWillUpdate(props, state) {
+  UNSAFE_componentWillUpdate(props, state) {
     let { error, animationDuration: duration } = this.props;
     let { focus, focused } = this.state;
 
