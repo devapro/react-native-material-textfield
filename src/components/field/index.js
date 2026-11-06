@@ -7,9 +7,13 @@ import {
   Animated,
   StyleSheet,
   Platform,
-  ViewPropTypes,
   I18nManager,
 } from 'react-native';
+import {
+  ViewPropTypes,
+  TextPropTypes,
+  TextInputPropTypes,
+} from 'deprecated-react-native-prop-types';
 
 import RN from 'react-native/package.json';
 
@@ -53,7 +57,7 @@ export default class TextField extends PureComponent {
   };
 
   static propTypes = {
-    ...TextInput.propTypes,
+    ...TextInputPropTypes,
 
     animationDuration: PropTypes.number,
     useNativeDriver: PropTypes.bool,
@@ -65,9 +69,9 @@ export default class TextField extends PureComponent {
     labelPadding: PropTypes.number,
     inputContainerPadding: PropTypes.number,
 
-    labelTextStyle: Text.propTypes.style,
-    titleTextStyle: Text.propTypes.style,
-    affixTextStyle: Text.propTypes.style,
+    labelTextStyle: TextPropTypes.style,
+    titleTextStyle: TextPropTypes.style,
+    affixTextStyle: TextPropTypes.style,
 
     tintColor: PropTypes.string,
     textColor: PropTypes.string,
@@ -93,8 +97,8 @@ export default class TextField extends PureComponent {
     prefix: PropTypes.string,
     suffix: PropTypes.string,
 
-    containerStyle: (ViewPropTypes || View.propTypes).style,
-    inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+    containerStyle: ViewPropTypes.style,
+    inputContainerStyle: ViewPropTypes.style,
   };
 
   constructor(props) {
